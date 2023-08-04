@@ -1,6 +1,6 @@
-function ToDoCounter(){
+function ToDoCounter({total, completed}){
     return(<h1>
-        Haz completado 3 de 5 ToDoS
+        Haz completado {completed} de {total} ToDoS
     </h1>);
 }
 
