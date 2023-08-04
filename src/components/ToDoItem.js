@@ -1,12 +1,13 @@
 
-function ToDoItem(){
+function ToDoItem(props){
     return(
-      <li>
-        <span>V</span>
-        <p>Jugar con Caneo! (^t^)</p>
+    // aqui el componente ToDoItem recibe los props text e index 
+    <li>
+        <span>V, completed: {props.completed ? 'Yeah' : 'Nop'}</span>
+        <p>{props.text}: {props.index}</p>
         <span>X</span>
-      </li>
+    </li>
     );
-  }
+}
 
-  export {ToDoItem}
+export {ToDoItem}
