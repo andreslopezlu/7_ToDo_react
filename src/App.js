@@ -17,9 +17,21 @@ function App() {
         >
           Learn React
         </a>
+        <br/>
+        <ToDoItems></ToDoItems>
       </header>
     </div>
   );
 }
 
 export default App;
+
+function ToDoItems(){
+  return(
+    <li>
+      <span>V</span>
+      <p>Jugar con Caneo! (^t^)</p>
+      <span>X</span>
+    </li>
+  );
+}
