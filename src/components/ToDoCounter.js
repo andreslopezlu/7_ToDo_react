@@ -1,7 +1,11 @@
-function ToDoCounter({total, completed}){
-    return(<h1>
-        Haz completado {completed} de {total} ToDoS
-    </h1>);
+import React from 'react';
+
+function ToDoCounter(props){
+    return(
+    <>  
+        <span>{props.left} items left</span>
+    </>
+    );
 }
 
 export {ToDoCounter};

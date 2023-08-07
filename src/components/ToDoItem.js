@@ -1,4 +1,3 @@
-
 function ToDoItem(props){
     return(
     // aqui el componente ToDoItem recibe los props text e index 

@@ -1,0 +1,73 @@
+html{
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+div#root{
+    max-width: 375px;
+    margin: 0 auto;
+    background-color: hsl(235, 21%, 11%);
+    color: white;
+}
+
+header{
+    background-image: url('../assets/todo-app-main/images/bg-mobile-dark.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+div.title{
+    margin-top: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 325px;
+    height: 20px;
+    margin-left: 26px;
+    margin-right: 26px;
+}
+
+img.theme-icon{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    height: 20px;
+}
+
+div.create-todo{
+    margin-top: 40px;
+    display: flex;
+    width: 327px;
+    height: 48px;
+    background-color: hsl(235, 24%, 19%);
+    border: 0;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+
+.create-todo .input{
+    font-family: 'Josefin Sans', sans-serif;
+    width: 275px;
+    background-color: hsl(235, 24%, 19%);
+    border: 0;
+    border-radius: 5px;
+    padding: 0;
+    color: #767992;
+}
+
+.create-todo .checked{
+    margin-left: 20px;
+    margin-top: 14px;
+    margin-right: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: hsl(235, 24%, 19%);
+    border: 1px solid #393A4B;
+}
