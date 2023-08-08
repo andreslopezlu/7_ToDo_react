@@ -26,7 +26,7 @@ function App() {
         <Title/>
         <CreateToDo/>
       </Header>
-      <div>
+      <div className='todos'>
         <ToDoList>
           {/* aqui el componente ToDoList pasa los props text e index  */}
           {/* React permite renderizar arrays, por lo que renderiza sin problema el retorno del metodo map aplicado sobre defaultToDoS */}
@@ -41,15 +41,15 @@ function App() {
             )
           })}
         </ToDoList>
-        <div>
+        <div className='left-todos'>
           <ToDoCounter left={20}/>
           <ClearCompletedToDo/>
         </div>
       </div>
-      <div>
+      <div className='filter-todos'>
         <FilterToDo/>
       </div>
-      <div>
+      <div className='note'>
         <Note/>
       </div>
     </div>

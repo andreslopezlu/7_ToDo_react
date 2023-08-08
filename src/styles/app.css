@@ -1,13 +1,13 @@
-html{
-    font-size: 18px;
+#root, *{
+    font-size: 12px;
     font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
 }
 
 div#root{
     max-width: 375px;
     margin: 0 auto;
     background-color: hsl(235, 21%, 11%);
-    color: white;
 }
 
 header{
@@ -51,16 +51,6 @@ div.create-todo{
     justify-content: space-between;
 }
 
-.create-todo .input{
-    font-family: 'Josefin Sans', sans-serif;
-    width: 275px;
-    background-color: hsl(235, 24%, 19%);
-    border: 0;
-    border-radius: 5px;
-    padding: 0;
-    color: #767992;
-}
-
 .create-todo .checked{
     margin-left: 20px;
     margin-top: 14px;
@@ -70,4 +60,119 @@ div.create-todo{
     border-radius: 50%;
     background-color: hsl(235, 24%, 19%);
     border: 1px solid #393A4B;
+}
+
+.create-todo .text-todo{
+    color: #767992;
+    width: 275px;
+    background-color: hsl(235, 24%, 19%);
+    border: 0;
+    border-radius: 5px;
+    padding: 0;
+}
+
+/* ------------------------------------- */
+
+div.todos{
+    border-radius: 5px;
+    width: 327px;
+    margin: 0 auto;
+    position: relative;
+    top: -28px;
+}
+
+div.existing-todo{
+    display: flex;
+    height: 48px;
+    background-color: hsl(235, 24%, 19%);
+    border: 0;
+    justify-content: space-between;
+    border-bottom: 1px solid #393A4B;
+    align-items: center;
+}
+
+.check-todo{
+    margin-left: 20px;
+    /* margin-top: 14px; */
+    margin-right: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: hsl(235, 24%, 19%);
+    border: 1px solid #393A4B;
+    padding: 0;
+}
+
+p.todo{
+    width: 223px;
+    background-color: hsl(235, 24%, 19%);
+    border: 0;
+    padding: 0;
+    color: #767992;
+}
+
+.delete-todo{
+    margin-right: 20px;
+    /* margin-top: 14px; */
+    margin-left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: hsl(235, 24%, 19%);
+    border: 0;
+    padding: 0;
+    color: #393A4B;
+}
+
+/* ------------------------------------- */
+
+.left-todos{
+    display: flex;
+    height: 48px;
+    background-color: hsl(235, 24%, 19%);
+    border: 0;
+    justify-content: space-between;
+    border-bottom: 1px solid #393A4B;
+    align-items: center;
+    color: #767992;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.clear-completed{
+    background-color: hsl(235, 24%, 19%);
+    border: 0;
+    color: #767992;
+}
+
+.filter-todos{
+    height: 48px;
+    background-color: hsl(235, 24%, 19%);
+    border: 0;
+    border-radius: 5px;
+    width: 327px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.filter-all, .filter-active, .filter-completed{
+    background-color: hsl(235, 24%, 19%);
+    border: 0;
+    color: #767992;
+    font-weight: 700;
+}
+
+.note{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.note span{
+    color: #767992;
+    font-size: 14px;
+    font-weight: regular;
+    margin-bottom: 72px;
 }
