@@ -1,9 +1,15 @@
-import './App.css';
 import { ToDoCounter } from './components/ToDoCounter';
-import { ToDoSearch } from './components/ToDoSearch';
 import { ToDoList } from './components/ToDoList';
 import { ToDoItem } from './components/ToDoItem';
-import { CreateToDoButton } from './components/CreateToDoButton';
+import { ClearCompletedToDo } from './components/ClearCompletedToDo';
+import { Title } from './components/Title';
+import { Header } from './components/Header';
+import { CreateToDo } from './components/CreateToDo';
+import { FilterToDo } from './components/FilterToDo';
+import { Note } from './components/Note';
+
+import './styles/reseter.css'
+import './styles/app.css'
 
 const defaultToDoS = [
   {text: '(^t^)', completed: true},
@@ -16,28 +22,37 @@ function App() {
   return (
     // <React.Fragment> permite renderizar toda la app sin un elemento padre adicional, que en este caso es App
     <div className='App'>
-      <ToDoCounter completed={10} total={20}/>
-      <ToDoSearch />
-
-      <ToDoList>
-        {/* aqui el componente ToDoList pasa los props text e index  */}
-        {/* React permite renderizar arrays, por lo que renderiza sin problema el retorno del metodo map aplicado sobre defaultToDoS */}
-        {defaultToDoS.map((todo, index) => {
-          return(
-          <ToDoItem 
-            key={index} 
-            text={todo.text} 
-            index={index}
-            completed={todo.completed}
-          />
+      <Header className='header'>
+        <Title/>
+        <CreateToDo/>
+      </Header>
+      <div className='todos'>
+        <ToDoList>
+          {/* aqui el componente ToDoList pasa los props text e index  */}
+          {/* React permite renderizar arrays, por lo que renderiza sin problema el retorno del metodo map aplicado sobre defaultToDoS */}
+          {defaultToDoS.map((todo, index) => {
+            return(
+            <ToDoItem 
+              key={index}
+              text={todo.text} 
+              index={index}
+              completed={todo.completed}
+            />
             )
-        })}
-      </ToDoList>
-
-      <CreateToDoButton/>
+          })}
+        </ToDoList>
+        <div className='left-todos'>
+          <ToDoCounter left={20}/>
+          <ClearCompletedToDo/>
+        </div>
+      </div>
+      <div className='filter-todos'>
+        <FilterToDo/>
+      </div>
+      <div className='note'>
+        <Note/>
+      </div>
     </div>
-    // </React.Fragment>
-    
   );
 }
 
