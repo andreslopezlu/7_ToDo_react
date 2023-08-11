@@ -8,18 +8,18 @@ div#root{
     max-width: 375px;
     margin: 0 auto;
     background-color: hsl(235, 21%, 11%);
+    min-height: 100vh;
 }
 
 header{
     background-image: url('../assets/todo-app-main/images/bg-mobile-dark.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 div.title{
@@ -33,11 +33,22 @@ div.title{
     margin-right: 26px;
 }
 
-img.theme-icon{
-    max-width: 100%;
-    height: auto;
-    display: block;
+div.todo-icon{
+    background-image: url('../assets/todo-app-main/images/TODO.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 108px;
     height: 20px;
+}
+
+div.theme-icon{
+    background-image: url('../assets/todo-app-main/images/icon-sun.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 20px;
+    width: 20px;
 }
 
 div.create-todo{
@@ -60,6 +71,7 @@ div.create-todo{
     border-radius: 50%;
     background-color: hsl(235, 24%, 19%);
     border: 1px solid #393A4B;
+    padding: 0;
 }
 
 .create-todo .text-todo{
@@ -93,7 +105,6 @@ div.existing-todo{
 
 .check-todo{
     margin-left: 20px;
-    /* margin-top: 14px; */
     margin-right: 0;
     width: 20px;
     height: 20px;
@@ -113,7 +124,6 @@ p.todo{
 
 .delete-todo{
     margin-right: 20px;
-    /* margin-top: 14px; */
     margin-left: 0;
     width: 20px;
     height: 20px;
@@ -131,7 +141,6 @@ p.todo{
     background-color: hsl(235, 24%, 19%);
     border: 0;
     justify-content: space-between;
-    border-bottom: 1px solid #393A4B;
     align-items: center;
     color: #767992;
     padding-left: 20px;
@@ -173,6 +182,120 @@ p.todo{
 .note span{
     color: #767992;
     font-size: 14px;
-    font-weight: regular;
+    font-weight: 400;
     margin-bottom: 72px;
+}
+
+@media (min-width: 1000px) and (max-width: 1440px){
+
+    #root, *{
+        font-size: 18px;
+    }
+
+    div#root{
+        min-width: 100%;
+        margin: 0 auto;
+        background-color: hsl(235, 21%, 11%);
+    }   
+
+    header{
+        background-image: url('../assets/todo-app-main/images/bg-desktop-dark.jpg');
+        height: 300px;
+        width: 100%;
+    }
+
+    div.title{
+        margin-top: 70px;
+        width: 37.5%;
+        height: 40px;
+        margin-left: 38%;
+        margin-right: 38%;
+    }
+
+    div.todo-icon{
+        background-image: url('../assets/todo-app-main/images/TODO_desktop.svg');
+        background-size: contain;
+        width: 167px;
+        height: 40px;
+    }
+    
+    div.theme-icon{
+        height: 26px;
+        width: 26px;
+    }
+
+    div.create-todo{
+        margin-top: 48px;
+        width: 37.5%;
+        height: 64px;
+    }
+
+    .create-todo .checked{
+        margin-left: 24px;
+        margin-top: 20px;
+        margin-right: 0;
+        width: 24px;
+        height: 24px;
+    }
+
+    .create-todo .text-todo{
+        width: 84%;
+    }
+
+/* ------------------------------------- */
+
+    div.todos{
+        width: 37.5%;
+        top: -54px;
+    }
+
+    div.existing-todo{
+        height: 64px;
+    }
+
+    .check-todo{
+        margin-left: 24px;
+        width: 24px;
+        height: 24px;
+    }
+
+    p.todo{
+        width: 68.8%;
+        background-color: hsl(235, 24%, 19%);
+        border: 0;
+        padding: 0;
+        color: #767992;
+    }
+
+    .delete-todo{
+        margin-right: 24px;
+        width: 24px;
+        height: 24px;
+    }
+
+/* ------------------------------------- */
+
+    .left-todos{
+        height: 64px;
+        padding-left: 24px;
+        padding-right: 24px;
+        font-size: 14px;
+    }
+
+    .clear-completed{
+        background-color: hsl(235, 24%, 19%);
+        border: 0;
+        color: #767992;
+        font-size: 14px;
+    }
+
+    .note{
+        margin-top: 49px;
+        font-size: 14px;
+    }
+    
+    .note span{
+        margin-bottom: 52px;
+    }
+
 }
