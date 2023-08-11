@@ -7,4 +7,4 @@ function Title(){
     );
 }
 
-export {Title}
+export { Title }

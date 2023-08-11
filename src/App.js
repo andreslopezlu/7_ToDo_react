@@ -4,7 +4,7 @@ import { ToDoItem } from './components/ToDoItem';
 import { ClearCompletedToDo } from './components/ClearCompletedToDo';
 import { Title } from './components/Title';
 import { Header } from './components/Header';
-import { CreateToDo } from './components/CreateToDo';
+import { CreateToDoButton } from './components/CreateToDoButton';
 import { FilterToDo } from './components/FilterToDo';
 import { Note } from './components/Note';
 
@@ -21,18 +21,16 @@ const defaultToDoS = [
 function App() {
   return (
     // <React.Fragment> permite renderizar toda la app sin un elemento padre adicional, que en este caso es App
-    <div className='App'>
+    <div>
       <Header className='header'>
         <Title/>
-        <CreateToDo/>
+        <CreateToDoButton/>
       </Header>
       <div className='todos'>
         <ToDoList>
-          {/* aqui el componente ToDoList pasa los props text e index  */}
-          {/* React permite renderizar arrays, por lo que renderiza sin problema el retorno del metodo map aplicado sobre defaultToDoS */}
           {defaultToDoS.map((todo, index) => {
             return(
-            <ToDoItem 
+            <ToDoItem
               key={index}
               text={todo.text} 
               index={index}
