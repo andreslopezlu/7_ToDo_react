@@ -9,6 +9,7 @@ import { FilterToDo } from './components/FilterToDo';
 import { Note } from './components/Note';
 
 import './styles/reseter.css'
+import './styles/action-buttons.css'
 import './styles/app.css'
 
 const defaultToDoS = [
@@ -39,12 +40,11 @@ function App() {
             )
           })}
         </ToDoList>
-        <div className='left-todos'>
-          <ToDoCounter left={20}/>
-          <ClearCompletedToDo/>
-        </div>
       </div>
-      <div className='filter-todos'>
+      {/* componente por el estilo de 'ActionButtons' */}
+      <div className='action-buttons'>
+        <ToDoCounter left={20}/>
+        <ClearCompletedToDo/>
         <FilterToDo/>
       </div>
       <div className='note'>
