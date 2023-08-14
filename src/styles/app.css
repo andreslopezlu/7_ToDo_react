@@ -10,6 +10,15 @@ div#root{
     min-height: 100vh;
 }
 
+.main-content{
+    margin-left: 6.5%;
+    margin-right: 6.5%;
+    position: relative;
+    top: -152px;
+    display: flex;
+    flex-direction: column;
+}
+
 header{
     background-image: url('../assets/todo-app-main/images/bg-mobile-dark.jpg');
     background-repeat: no-repeat;
@@ -22,14 +31,11 @@ header{
 }
 
 div.title{
-    margin-top: 48px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 325px;
+    width: 100%;
     height: 20px;
-    margin-left: 26px;
-    margin-right: 26px;
 }
 
 div.todo-icon{
@@ -53,18 +59,17 @@ div.theme-icon{
 div.create-todo{
     margin-top: 40px;
     display: flex;
-    width: 327px;
+    width: 100%;
     height: 48px;
     background-color: hsl(235, 24%, 19%);
     border: 0;
     border-radius: 5px;
     justify-content: space-between;
+    align-items: center;
 }
 
 .create-todo .checked{
     margin-left: 20px;
-    margin-top: 14px;
-    margin-right: 0;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -73,23 +78,27 @@ div.create-todo{
     padding: 0;
 }
 
-.create-todo .text-todo{
+input.text-todo{
     color: #767992;
-    width: 275px;
+    max-width: 84%;
     background-color: hsl(235, 24%, 19%);
     border: 0;
     border-radius: 5px;
     padding: 0;
+    position: absolute;
+    margin-left: 52px;
+    margin-right: 12px;
+    overflow: hidden;
 }
 
 /* ------------------------------------- */
 
 div.list{
     border-radius: 5px;
-    width: 327px;
+    width: 100%;
     margin: 0 auto;
     position: relative;
-    top: -28px;
+    margin-top: 28px;
 }
 
 div.existing-todo{
@@ -114,11 +123,15 @@ div.existing-todo{
 }
 
 p.todo{
-    width: 223px;
+    max-width: 68%;
     background-color: hsl(235, 24%, 19%);
     border: 0;
     padding: 0;
     color: #767992;
+    position: absolute;
+    margin-left: 52px;
+    margin-right: 12px;
+    overflow: hidden;
 }
 
 .delete-todo{
@@ -220,7 +233,7 @@ p.todo{
 
     div.list{
         width: 37.5%;
-        top: -54px;
+        margin-top: 54px;
     }
 
     div.existing-todo{

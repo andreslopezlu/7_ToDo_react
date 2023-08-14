@@ -16,19 +16,20 @@ import './styles/app.css'
 
 function App() {
   return (
-    <div className='main-container'>
-      <Header className='header'>
+    <>
+      <Header className='header'/>
+      <div className='main-content'>
         <Title/>
         <CreateToDoButton/>
-      </Header>
-      <ToDoList/>
-      <div className='action-buttons'>
-        <ToDoCounter left={20}/>
-        <ClearCompletedToDo/>
-        <FilterToDo/>
+        <ToDoList/>
+        <div className='action-buttons'>
+          <ToDoCounter left={20}/>
+          <ClearCompletedToDo/>
+          <FilterToDo/>
+        </div>
+        <Note/>
       </div>
-      <Note/>
-    </div>
+    </>
   );
 }
 
