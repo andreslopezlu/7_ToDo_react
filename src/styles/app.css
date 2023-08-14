@@ -84,7 +84,7 @@ div.create-todo{
 
 /* ------------------------------------- */
 
-div.todos{
+div.list{
     border-radius: 5px;
     width: 327px;
     margin: 0 auto;
@@ -218,7 +218,7 @@ p.todo{
 
 /* ------------------------------------- */
 
-    div.todos{
+    div.list{
         width: 37.5%;
         top: -54px;
     }

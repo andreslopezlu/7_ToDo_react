@@ -1,9 +1,9 @@
 function Note(){
-    return(
-        <>
-            <span>Drag and drop to reorder list</span>
-        </>
-    );
+  return(
+    <div className='note'>
+        <span>Drag and drop to reorder list</span>
+    </div>
+  );
 }
 
 export {Note}
