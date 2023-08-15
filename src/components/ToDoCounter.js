@@ -1,11 +1,11 @@
 import React from 'react';
 
 function ToDoCounter(props){
-    return(
-        <>
-            <span>{props.left} items left</span>
-        </>
-    );
+  return(
+    <div className='counter'>
+      <span>{props.left} items left</span>
+    </div>
+  );
 }
 
 export { ToDoCounter };

@@ -1,0 +1,16 @@
+.main-content{
+    margin-left: 6.5%;
+    margin-right: 6.5%;
+    position: relative;
+    top: -152px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1001px) {
+    .main-content{
+        margin-left: 31%;
+        margin-right: 31%;
+        top: -230px;
+    }
+}
