@@ -1,0 +1,26 @@
+.note{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.note span{
+    color: #767992;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 72px;
+    text-align: center;
+}
+
+@media (min-width: 1001px) {
+    
+    .note{
+        margin-top: 49px;
+        font-size: 14px;
+    }
+    
+    .note span{
+        margin-bottom: 52px;
+    }
+
+}

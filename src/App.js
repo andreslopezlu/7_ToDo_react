@@ -9,6 +9,15 @@ import { FilterToDo } from './components/FilterToDo';
 import { Note } from './components/Note';
 
 import './styles/reseter.css'
+import './styles/root.css'
+import './styles/main-content.css'
+import './styles/header.css'
+import './styles/title.css'
+import './styles/create-todo-button.css'
+import './styles/todo-list.css'
+import './styles/todo-item.css'
+import './styles/note.css'
+
 import './styles/action-buttons.css'
 import './styles/app.css'
 
@@ -17,7 +26,7 @@ import './styles/app.css'
 function App() {
   return (
     <>
-      <Header className='header'/>
+      <Header/>
       <div className='main-content'>
         <Title/>
         <CreateToDoButton/>

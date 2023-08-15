@@ -1,0 +1,18 @@
+#root, *{
+    font-size: 12px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+
+div#root{
+    margin: 0;
+    background-color: hsl(235, 21%, 11%);
+    min-height: 100vh;
+}
+
+@media (min-width: 1001px) {
+
+    #root, *{
+        font-size: 18px;
+    }
+}
